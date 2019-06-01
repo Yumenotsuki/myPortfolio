@@ -1,38 +1,47 @@
-import React from 'react';
-import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
- CardSubtitle, CardBody } from 'reactstrap';
+  import React from 'react';
+  import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, MDBRow } from 'mdbreact';
+  import HarryPotter from '../img/harryPotter.png';
+  import LoireEnVert from '../img/loireEnVert.png';
+  import PortfolioWild from '../img/portfolioWild.png';
 
 const Portfolio = (props) => {
   return (
-    <CardDeck>
-      <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-    </CardDeck>
+    <div>
+    <MDBRow>
+    <MDBCol>
+      <MDBCard>
+        <MDBCardImage top src={LoireEnVert} alt="Card image cap" />
+        <MDBCardBody>
+          <MDBCardTitle>Loire en Vert project</MDBCardTitle>
+          <h5>Mobile application for Loire en Vert Association</h5>
+          <MDBCardText>Technologies: React, NodeJS, Express JS, Axios, Mysql, Reactstrap</MDBCardText>
+          <MDBBtn href="https://play.google.com/store/apps/details?id=fr.loireenvert.cordova&hl=fr" target="blank">Button</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+      </MDBCol>
+      <MDBCol>
+      <MDBCard>
+        <MDBCardImage top src={HarryPotter} alt="Card image cap" />
+        <MDBCardBody>
+          <MDBCardTitle>Spotter project</MDBCardTitle>
+          <h5>Harry Potter game project</h5>
+          <MDBCardText>Technologies : React</MDBCardText>
+          <MDBBtn href="https://luckarts.github.io/Spotter/#/" target="blank">Button</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+      </MDBCol>
+      <MDBCol>
+      <MDBCard>
+        <MDBCardImage top src={PortfolioWild} alt="Card image cap" />
+        <MDBCardBody>
+          <MDBCardTitle>Portfolio project</MDBCardTitle>
+          <MDBCardText>Technologies: html, css, Bootstrap</MDBCardText>
+          <MDBBtn href="https://wildcodeschool.github.io/lyon-0918-portfolio/page5.html" target="blank">Button</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+      </MDBCol>
+    </MDBRow>
+    </div>
   );
 };
 

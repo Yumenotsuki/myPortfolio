@@ -1,12 +1,17 @@
 import React from 'react';
-import { Jumbotron, Button } from 'reactstrap';
+//import './../css/footer.css';
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <div>
-      <p>Marion-2019</p>
-    </div>
+    <MDBFooter color="indigo" className="font-small pt-4 mt-4">
+      <div className="footer-copyright text-center py-3">
+        <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright: Marion-2019
+        </MDBContainer>
+      </div>
+    </MDBFooter>
   );
-};
+}
 
 export default Footer;
